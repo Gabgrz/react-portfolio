@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
+
+import Chart from './Chart';
+import Legend from './Legend';
+
 export default  class Resume extends Component {
   render() {
     let resumeData = this.props.resumeData;
     return (
       <section id="resume">
-
+        
          <div className="row education">
-
+            <div className="three columns header-col"> 
+            </div>            
             <div className="three columns header-col">
                <h1><span>Education</span></h1>
             </div>
@@ -31,7 +36,9 @@ export default  class Resume extends Component {
               }
             </div>
          </div>
-        <div className="row work">
+      <div className="row work"> 
+            <div className="three columns header-col"> 
+            </div>
             <div className="three columns header-col">
                <h1><span>Work</span></h1>
             </div>
@@ -57,17 +64,35 @@ export default  class Resume extends Component {
                 })
               }
             </div> 
-         </div>
+   </div> 
 
+
+<div className="container">
+
+                        <div className="three columns header-col"> 
+            </div>
+                                
+            <ul className="nav nav-tabs">
+            
+              <li className="active"><a data-toggle="tab" href="#skills">Skills</a></li>
+              <li><a data-toggle="tab" href="#github">GitHub</a></li>
+          </ul>
+          
+
+      <div className="tab-content">
+          <div id="skills" className="tab-pane fade in active">
 
          <div className="row skill">
+            <div className="three columns header-col"> 
 
+            </div>
+            
             <div className="three columns header-col">
                <h1><span>Skills</span></h1>
             </div>
 
             <div className="nine columns main-col">
-
+               <br></br> 
                <p>
                {resumeData.skillsDescription}
                </p>
@@ -93,6 +118,20 @@ export default  class Resume extends Component {
    			</div>
 
          </div>
+
+          </div>
+
+          <div id="github" className="tab-pane fade">
+            <div className="three columns header-col"> 
+            </div>
+              <h1><span>My GitHub activity</span></h1>
+               <br></br>
+                   
+                <Legend/>
+                <Chart/>
+          </div>
+      </div>
+        </div>
 
       </section>
     );

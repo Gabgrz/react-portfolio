@@ -1,63 +1,63 @@
 let resumeData = {
     "imagebaseurl":"https://rbhatia46.github.io/",
-    "name": "Rahul Bhatia",
-    "role": "Frontend Developer and Data Scientist",
-    "linkedinId":"Your LinkedIn Id",
-    "skypeid": "Your skypeid",
-    "roleDescription": "I like dabbling in various parts of frontend development and like to learn about new technologies, write technical articles or simply play games in my free time.",
+    "name": "Gabriel Garoz",
+    "role": "Applications Developer",
+    "linkedinId":"gabriel-garoz-51a777162",
+    "skypeid": "gab.120gg",
+    "roleDescription": "I like dabbling in various parts of full stack development and like to learn about new technologies, write technical articles or simply play games in my free time.",
     "socialLinks":[
         {
           "name":"linkedin",
-          "url":"https://www.linkedin.com/in/rahul-bhatia-67ba08121/",
+          "url":"https://www.linkedin.com/in/gabriel-garoz-51a777162/",
           "className":"fa fa-linkedin"
         },
         {
           "name":"github",
-          "url":"http://github.com/rbhatia46",
+          "url":"http://github.com/gabgrz",
           "className":"fa fa-github"
         },
         {
-          "name":"skype",
-          "url":"http://twitter.com/rbhatia46",
+          "name":"Twitter",
+          "url":"http://twitter.com/gabgrzzz",
           "className":"fa fa-twitter"
         }
       ],
     "aboutme":"I am currently a pre-final year student at The LNM Institute of Information Technology and pursuing my B.Tech from here. I am a self taught Full Stack Web Developer, currently diving deeper into Machine Learning. I believe that to be successful in life, one needs to be obsessive with their dreams and keep working towards them.",
-    "address":"India",
-    "website":"https://rbhatia46.github.io",
+    "address":"Guatemala",
+    "website":"http://github.com/gabgrz",
     "education":[
       {
-        "UniversityName":"The LNM Insitute of Information Technology",
-        "specialization":"Some specialization",
+        "UniversityName":"Galileo University",
+        "specialization":"Business and Technology administration",
         "MonthOfPassing":"Aug",
-        "YearOfPassing":"2020",
+        "YearOfPassing":"2021",
         "Achievements":"Some Achievements"
       },
       {
-        "UniversityName":"Some University",
-        "specialization":"Some specialization",
-        "MonthOfPassing":"Jan",
-        "YearOfPassing":"2018",
+        "UniversityName":"Rafael Landivar University",
+        "specialization":"Communication Sciences",
+        "MonthOfPassing":"December",
+        "YearOfPassing":"2016",
         "Achievements":"Some Achievements"
       }
     ],
     "work":[
       {
-        "CompanyName":"Some Company",
-        "specialization":"Some specialization",
-        "MonthOfLeaving":"Jan",
-        "YearOfLeaving":"2018",
-        "Achievements":"Some Achievements"
+        "CompanyName":"TELUS International, Digital Solutions",
+        "specialization":"Java Developer intern",
+        "MonthOfLeaving":"October",
+        "YearOfLeaving":"2019",
+        "Achievements":"First employee to gain an internship in software development"
       },
       {
-        "CompanyName":"Some Company",
-        "specialization":"Some specialization",
-        "MonthOfLeaving":"Jan",
-        "YearOfLeaving":"2018",
-        "Achievements":"Some Achievements"
+        "CompanyName":"TELUS International, Google",
+        "specialization":"Chrome Enterprise Deluxe Specialist",
+        "MonthOfLeaving":"-",
+        "YearOfLeaving":"Present",
+        "Achievements":"Promoted to be part of the deluxe team responsible of providing technical support for Google's most important businesses using Chrome Enterprise"
       }
     ],
-    "skillsDescription":"Your skills here",
+    "skillsDescription":"",
     "skills":[
       {
         "skillname":"HTML5"
@@ -73,22 +73,22 @@ let resumeData = {
       {
         "name":"project1",
         "description":"mobileapp",
-        "imgurl":"images/portfolio/phone.jpg"
+        "imgurl":"images/portfolio/judah.jpg"
       },
       {
         "name":"project2",
         "description":"mobileapp",
-        "imgurl":"images/portfolio/project.jpg"
+        "imgurl":"images/portfolio/retrocam.jpg"
       },
       {
         "name":"project3",
         "description":"mobileapp",  
-        "imgurl":"images/portfolio/project2.png"
+        "imgurl":"images/portfolio/coffee.jpg"
       },
       {
         "name":"project4",
         "description":"mobileapp",
-        "imgurl":"images/portfolio/phone.jpg"
+        "imgurl":"images/portfolio/origami.jpg"
       }
     ],
     "testimonials":[
