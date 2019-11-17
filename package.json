@@ -2,6 +2,9 @@
   "name": "resume",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.14.2"
+    },
   "dependencies": {
     "@gabgrz/github-contributions": "https://api.observablehq.com/@gabgrz/github-contributions.tgz?v=3",
     "@observablehq/runtime": "4",
