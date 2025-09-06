@@ -2,13 +2,13 @@ let resumeData = {
     "imagebaseurl":"https://rbhatia46.github.io/",
     "name": "Gabriel Garoz",
     "role": "Full Stack Developer",
-    "linkedinId":"gabriel-garoz-51a777162",
+    "linkedinId":"gabrielgaroz",
     "skypeid": "gab.120gg",
     "roleDescription": " I like dabbling in various parts of full stack development and like to learn about new technologies, write technical articles or simply play games in my free time.",
     "socialLinks":[
         {
           "name":"linkedin",
-          "url":"https://www.linkedin.com/in/gabriel-garoz-51a777162/",
+          "url":"https://www.linkedin.com/in/gabrielgaroz/",
           "className":"fa fa-linkedin"
         },
         {
