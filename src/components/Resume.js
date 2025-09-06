@@ -82,14 +82,26 @@ function Resume({ resumeData }) {
                {resumeData.skillsDescription}
                </p>
 
-   				<div className="bars" style={{width: '100%', maxWidth: '600px', margin: '0 auto'}}>
+   				<div className="bars" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'}}>
 
-   				   <ul className="skills" style={{listStyle: 'none', padding: '0', margin: '0'}}>
+   				   <ul className="skills" style={{listStyle: 'none', padding: '0', margin: '0', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', maxWidth: '500px'}}>
                 {
                   resumeData.skills && resumeData.skills.map((item, index) => {
+                    const skillWidth = item.skillname === 'HTML5' ? '80%' : 
+                                     item.skillname === 'CSS' ? '90%' : 
+                                     item.skillname === 'Reactjs' ? '85%' : '70%';
                     return(
-                      <li key={index} style={{marginBottom: '30px', position: 'relative', backgroundColor: '#e9ecef', height: '40px', borderRadius: '20px', overflow: 'hidden'}}>
-                      <span className={`bar-expand ${item.skillname.toLowerCase()}`} style={{position: 'absolute', left: '0', top: '0', height: '100%', backgroundColor: '#11ABB0', borderRadius: '20px', transition: 'width 2s ease-in-out'}}>
+                      <li key={index} style={{marginBottom: '30px', position: 'relative', backgroundColor: '#e9ecef', height: '40px', borderRadius: '20px', overflow: 'hidden', width: '100%'}}>
+                      <span className={`bar-expand ${item.skillname.toLowerCase()}`} style={{
+                        position: 'absolute', 
+                        left: '0', 
+                        top: '0', 
+                        height: '100%', 
+                        backgroundColor: '#11ABB0', 
+                        borderRadius: '20px', 
+                        transition: 'width 2s ease-in-out',
+                        width: skillWidth
+                      }}>
                       </span><em style={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: '#313131', fontWeight: 'bold', fontSize: '1rem', zIndex: '1'}}>{item.skillname}</em>
                       </li>
                     )
