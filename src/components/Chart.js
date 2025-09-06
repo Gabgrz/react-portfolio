@@ -1,26 +1,24 @@
-import React, {Component} from 'react';
+import React, { useRef, useEffect } from 'react';
 import {Runtime, Inspector} from "@observablehq/runtime";
 import define from "@gabgrz/github-contributions";
 
-class Chart extends Component {
-  chart = React.createRef();
+function Chart() {
+  const chart = useRef(null);
 
-  componentDidMount() {
+  useEffect(() => {
     const runtime = new Runtime();
     runtime.module(define, name => {
       if (name === "chart") {
-        return new Inspector(this.chart.current);
+        return new Inspector(chart.current);
       }
     });
-  }
+  }, []);
 
-  render() {
-    return (
-      <div className="Chart">
-        <div ref={this.chart}></div>
-      </div>
-    );
-  }
+  return (
+    <div className="Chart">
+      <div ref={chart}></div>
+    </div>
+  );
 }
 
 export default Chart;

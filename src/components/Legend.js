@@ -1,26 +1,24 @@
-import React, {Component} from 'react';
+import React, { useRef, useEffect } from 'react';
 import {Runtime, Inspector} from "@observablehq/runtime";
 import define from "@gabgrz/github-contributions";
 
-class Legend extends Component {
-  contributionsLegend = React.createRef();
+function Legend() {
+  const contributionsLegend = useRef(null);
 
-  componentDidMount() {
+  useEffect(() => {
     const runtime = new Runtime();
     runtime.module(define, name => {
       if (name === "contributionsLegend") {
-        return new Inspector(this.contributionsLegend.current);
+        return new Inspector(contributionsLegend.current);
       }
     });
-  }
+  }, []);
 
-  render() {
-    return (
-      <div className="Legend">
-        <div ref={this.contributionsLegend}></div>
-      </div>
-    );
-  }
+  return (
+    <div className="Legend">
+      <div ref={contributionsLegend}></div>
+    </div>
+  );
 }
 
 export default Legend;

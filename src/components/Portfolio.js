@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-export default class Porfolio extends Component {
-  render() {
-    let resumeData = this.props.resumeData;
+import React from 'react';
+
+function Portfolio({ resumeData }) {
     return (
       <section id="portfolio">
       <div className="row">
@@ -32,5 +31,6 @@ export default class Porfolio extends Component {
       </div>
   </section>
         );
-  }
 }
+
+export default Portfolio;

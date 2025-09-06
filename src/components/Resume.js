@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Chart from './Chart';
 import Legend from './Legend';
 
-export default  class Resume extends Component {
-  render() {
-    let resumeData = this.props.resumeData;
+function Resume({ resumeData }) {
     return (
       <section id="resume">
         
@@ -135,5 +133,6 @@ export default  class Resume extends Component {
 
       </section>
     );
-  }
 }
+
+export default Resume;
