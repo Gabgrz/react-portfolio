@@ -1,15 +1,35 @@
-[![HitCount](http://hits.dwyl.io/rbhatia46/React-Portfolio.svg)](http://hits.dwyl.io/rbhatia46/React-Portfolio)
+# React Portfolio
 
+A React portfolio template for developers/designers. This example has been upgraded to React 19 and features a modern, responsive design.
 
-A simple SPA Portfolio template for developer/designers built with React. Use it to showcase your work, testimonials and other information to clients.
+> **📅 Portfolio Data Note:** The portfolio content (work experience, education, skills, etc.) in this example is from 2019. This is intentional to demonstrate the template structure - you should replace all data in `src/resumeData.js` with your own current information.
 
-## Preview
-![Preview](https://i.ibb.co/Xtn83nk/react-portfolio-frontpage.png)
+## Quick Start
 
-## How to use
-1. Clone/Download the repo.
-2. Run  ``` npm install ```.
-3. Change the values in ```src/resumeData.js``` to suit your use-case.
-4. Run ```npm start``` to spin the up the local dev server port 3000.(http://localhost:3000).
-5. Make required changes in ```src/resumeData.js``` to suit your needs.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Start development server:**
+   ```bash
+   npm start
+   ```
+
+3. **Open in browser:**
+   Navigate to `http://localhost:3000`
+
+## Customization
+
+Edit `src/resumeData.js` to update your personal information, portfolio items, and other content.
+
+## Features
+
+- ✅ React 19 compatible
+- ✅ Responsive design
+- ✅ Modern UI with centered layouts
+- ✅ Interactive tab navigation
+- ✅ Portfolio showcase
+- ✅ Contact information
+- ✅ Social media links
 
