@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Chart from './Chart';
 import Legend from './Legend';
 
 function Resume({ resumeData }) {
+    const [activeTab, setActiveTab] = useState('skills');
     return (
       <section id="resume">
         
@@ -64,13 +65,49 @@ function Resume({ resumeData }) {
 <div className="container" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '1000px', margin: '0 auto', padding: '0 20px'}}>
 
             <ul className="nav nav-tabs" style={{display: 'flex', justifyContent: 'center', marginBottom: '40px', listStyle: 'none', padding: '0'}}>
-              <li className="active" style={{margin: '0 10px'}}><a data-toggle="tab" href="#skills" style={{padding: '10px 20px', backgroundColor: '#11ABB0', color: 'white', textDecoration: 'none', borderRadius: '5px', fontSize: '1.1rem', fontWeight: 'bold'}}>Skills</a></li>
-              <li style={{margin: '0 10px'}}><a data-toggle="tab" href="#github" style={{padding: '10px 20px', backgroundColor: '#e9ecef', color: '#313131', textDecoration: 'none', borderRadius: '5px', fontSize: '1.1rem', fontWeight: 'bold'}}>GitHub</a></li>
+              <li style={{margin: '0 10px'}}>
+                <a 
+                  onClick={(e) => { e.preventDefault(); setActiveTab('skills'); }} 
+                  href="#skills" 
+                  style={{
+                    padding: '10px 20px', 
+                    backgroundColor: activeTab === 'skills' ? '#11ABB0' : '#e9ecef', 
+                    color: activeTab === 'skills' ? 'white' : '#313131', 
+                    textDecoration: 'none', 
+                    borderRadius: '5px', 
+                    fontSize: '1.1rem', 
+                    fontWeight: 'bold',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease'
+                  }}
+                >
+                  Skills
+                </a>
+              </li>
+              <li style={{margin: '0 10px'}}>
+                <a 
+                  onClick={(e) => { e.preventDefault(); setActiveTab('github'); }} 
+                  href="#github" 
+                  style={{
+                    padding: '10px 20px', 
+                    backgroundColor: activeTab === 'github' ? '#11ABB0' : '#e9ecef', 
+                    color: activeTab === 'github' ? 'white' : '#313131', 
+                    textDecoration: 'none', 
+                    borderRadius: '5px', 
+                    fontSize: '1.1rem', 
+                    fontWeight: 'bold',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease'
+                  }}
+                >
+                  GitHub
+                </a>
+              </li>
           </ul>
           
 
       <div className="tab-content" style={{width: '100%'}}>
-          <div id="skills" className="tab-pane fade in active" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
+          <div id="skills" className="tab-pane fade in active" style={{display: activeTab === 'skills' ? 'flex' : 'none', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
 
          <div className="row skill" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%', maxWidth: '800px', margin: '0 auto'}}>
             <div style={{marginBottom: '50px'}}>
@@ -118,13 +155,50 @@ function Resume({ resumeData }) {
 
           </div>
 
-          <div id="github" className="tab-pane fade" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
-            <div style={{marginBottom: '50px'}}>
-              <h1 style={{fontSize: '3rem', color: '#313131', fontWeight: 'bold', marginBottom: '10px'}}><span style={{borderBottom: '3px solid #11ABB0', paddingBottom: '6px'}}>My GitHub Activity</span></h1>
-            </div>
-            <div style={{width: '100%', maxWidth: '800px'}}>
-                <Legend/>
-                <Chart/>
+          <div id="github" style={{display: activeTab === 'github' ? 'flex' : 'none', flexDirection: 'column', alignItems: 'center', textAlign: 'center', minHeight: '400px', width: '100%'}}>
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%', maxWidth: '800px', margin: '0 auto'}}>
+              <div style={{marginBottom: '50px'}}>
+              </div>
+              
+              <div style={{marginBottom: '40px', padding: '20px', backgroundColor: '#f8f9fa', borderRadius: '10px', border: '1px solid #e9ecef'}}>
+                <h3 style={{fontSize: '1.5rem', color: '#313131', marginBottom: '20px'}}>GitHub Profile</h3>
+                <a 
+                  href="https://github.com/Gabgrz" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '80px',
+                    height: '80px',
+                    backgroundColor: '#24292e',
+                    color: '#fff',
+                    borderRadius: '50%',
+                    textDecoration: 'none',
+                    fontSize: '40px',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                    marginBottom: '20px'
+                  }}
+                  onMouseOver={(e) => {
+                    e.target.style.backgroundColor = '#11ABB0';
+                    e.target.style.transform = 'translateY(-3px)';
+                    e.target.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.3)';
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = '#24292e';
+                    e.target.style.transform = 'translateY(0)';
+                    e.target.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                  }}
+                >
+                  <i className="fa fa-github" style={{fontSize: '40px'}}></i>
+                </a>
+                <p style={{fontSize: '1.2rem', color: '#6E7881', margin: '0'}}>
+                  Visit my GitHub profile: <strong>@Gabgrz</strong>
+                </p>
+              </div>
+              
             </div>
           </div>
       </div>
